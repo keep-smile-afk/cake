@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./css/head.css">
+		<link rel="stylesheet" href="./css/order.css">
+		<link rel="stylesheet" type="text/css" href="css/foot.css" />
+		<script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div class="h_head" style="margin-bottom: 10px;">
+			<h1 class="ll">
+				<a href="http://www.holiland.com/">
+					<img src="./img/index/logo.png">
+				</a>
+			</h1>
+			<div class="head_right head_right_new">
+				<div class="h_login" style="margin-top:-8px; margin-bottom:8px;">
+					<label>
+						<a href="http://www.holiland.com/misc.php?act=login" style="text-decoration: none;">登录</a>
+						<a href="http://www.holiland.com/misc.php?act=register" style="margin-left:20px;text-decoration: none;">注册</a>
+					</label>
+					<span id="productCountsAndTotoalId" class="car" style="position: relative;">
+						<a href="http://www.holiland.com/flow.php" style="text-decoration: none;">
+							<b id="good_count">0</b>件
+							<b id="cart_total_price" style="position:absolute;top:-8px;left:0;"></b>
+						</a>
+					</span>
+					<label class="dz_lo" id="area_self" style="width:auto; overflow:hidden; float:right; margin-top:0; margin-right:20px;">
+						<a href="javascript:;" style="text-decoration: none;">
+							<i style="margin-right:0;padding-right:8px;"></i>北京
+						</a>
+					</label>
+				</div>
+				<div class="baner">
+					<ul>
+						<li class="navmenu">
+							<a href="/classify/1.html">
+								<span>All Products</span>
+								<span>全部产品</span>
+							</a>
+						</li>
+						<li class="navmenu">
+							<a href="/cake.html">
+								<span>Cake Series</span>
+								<span>蛋糕系列</span>
+							</a>
+							<ul class="sub_nav" style="display: none;">
+								<li style="border-bottom:none;"><a href="/classify/41.html">新品系列</a></li>
+								<li style="border-bottom:none;"><a href="/classify/2.html">经典系列</a></li>
+								<li style="border-bottom:none;"><a href="/classify/27.html">儿童系列</a></li>
+								<li style="border-bottom:none;"><a href="/classify/34.html">尊爱系列</a></li>
+							</ul>
+						</li>
+						<li class="navmenu">
+							<a href="/classify/26.html">
+								<span>Wagashi</span>
+								<span>零食糕点</span>
+							</a>
+						</li>
+						<li class="navmenu" style="border:none;">
+							<a href="/page/27.html">
+								<span>About Us</span>
+								<span>关于我们</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+				<script type="text/javascript">
+					$(function() {
+						$(".navmenu").hover(function() {
+							$(this).find(".sub_nav").show();
+						}, function() {
+							$(this).find(".sub_nav").hide();
+						});
+					})
+				</script>
+				<div class="phone">
+					<img src="./img/index/phone_icon.png" height="15">
+					400-700-5999
+				</div>
+				<div class="h_navserch">
+					<form name="psForm" id="searchform" method="GET" action="/search.php">
+						<input length="20" style="color:#999" name="keywords" maxlength="80" type="text">
+						<a href="javascript:searchSubmitForm();"></a>&nbsp;
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="login_bt" style="text-align:center; padding-left:0; width:996px; background:#fff;">
+			<span style="float:left; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+			<span style="width:10%; display:inline-block; color:#909090; font-weight:bold;">购物车</span>
+			<span style="float:right; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+		</div>
+		<div class="gouwuche">
+			<form id="formCart" name="formCart" method="post" action="flow.php">
+				<table class="xq" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<th class="sa"><span style="text-align:left; padding-left:98px;">商品名称</span></th>
+							<th class="sb"><span>属性</span></th>
+							<th class="sc"><span>积分</span></th>
+							<th class="sd"><span style="width:90px">单价</span></th>
+							<th class="se"><span style="width:130px">购买数量</span></th>
+							<th class="se"><span style="width:90px">小计</span></th>
+							<th class="sf" align="center"><span style="width:85px">操作</span></th>
+						</tr>
+						<tr class="b_line">
+							<td bgcolor="#ffffff" align="center">
+								<dl style="margin-left:-10px;">
+									<dd><input type="checkbox" style="margin-top:100%" value="2374896" name="ids"></dd>
+									<dt><a href="detailed.php?id=1400"><img src="http://img.holiland.com/images/202008/thumb_img/1400_thumb_G_1598132738433.jpg"
+											 width="60" align="absMiddle" height="60" style="margin-left: -168px;"></a>&nbsp;&nbsp; </dt>
+									<dd style="line-height:60px;">
+										<p>
+											<a href="detailed.php?id=1400">好利来x哈根达斯联名-宝藏杯杯\雪宝宝</a>
+										</p>
+										<!-- <label style="width:auto;">此商品性质不</label>
+									<label style="width:auto;">编号 MX001400</label> -->
+									</dd>
+								</dl>
+							</td>
+							<td style="padding-left:20px;">雪宝宝(冰淇淋)/6盒2味</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">138积分</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								￥138.00<br>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<div style="TEXT-ALIGN: center; MARGIN-LEFT: 0px">
+									<a class="jian jie" href="javascript:;" class="jie">-</a>
+									<input id="goods_number_2374896" class="bg nums" value="1" style="margin-left: 3px;">
+									<a class="jian jia" style="TEXT-DECORATION: none" href="javascript:;" class="jia">+</a>
+								</div>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="xiaoji">￥138.00</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<a onclick="javascript:return del_flow(2374896);" class="f6 openmsg" href="javascript:;" data-id="2374896">删除</a>
+							</td>
+						</tr>
+						<tr class="b_line">
+							<td bgcolor="#ffffff" align="center">
+								<dl style="margin-left:-10px;">
+									<dd><input type="checkbox" style="margin-top:100%" value="2374896" name="ids"></dd>
+									<dt><a href="detailed.php?id=1400"><img src="http://img.holiland.com/images/202008/thumb_img/1400_thumb_G_1598132738433.jpg"
+											 width="60" align="absMiddle" height="60" style="margin-left: -168px;"></a>&nbsp;&nbsp; </dt>
+									<dd style="line-height:60px;">
+										<p>
+											<a href="detailed.php?id=1400">好利来x哈根达斯联名-宝藏杯杯\雪宝宝</a>
+										</p>
+										<!-- <label style="width:auto;">此商品性质不</label>
+									<label style="width:auto;">编号 MX001400</label> -->
+									</dd>
+								</dl>
+							</td>
+							<td style="padding-left:20px;">雪宝宝(冰淇淋)/6盒2味</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">138积分</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								￥138.00<br>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<div style="TEXT-ALIGN: center; MARGIN-LEFT: 0px">
+									<a class="jian jie" href="javascript:;">-</a>
+									<input id="goods_number_2374896" class="bg nums" value="1" style="margin-left: 3px;">
+									<a class="jian jia" style="TEXT-DECORATION: none" href="javascript:;">+</a>
+								</div>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="xiaoji">￥138.00</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<a onclick="javascript:return del_flow(2374896);" class="f6 openmsg" href="javascript:;" data-id="2374896">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<script type="text/javascript">
+					$(function() {
+						getSum()
+						$(".jixu input[name=ckeck_all]").change(function() {
+							$(".b_line input[name = ids]").prop("checked", $(this).prop("checked"));
+						})
+						$(".b_line input[name = ids]").change(function() {
+							if ($(".b_line input[name = ids]:checked").length === $(".b_line input[name = ids]").length) {
+								$(".jixu input[name=ckeck_all]").prop("checked", true);
+							} else {
+								$(".jixu input[name=ckeck_all]").prop("checked", false);
+							}
+						})
+
+						$(".jia").click(function() {
+							var n = parseInt($(this).siblings("#goods_number_2374896").val());
+							n++;
+							$(this).siblings("#goods_number_2374896").val(n);
+							var price = parseFloat($(this).parent().parent().prev().text().split("￥")[1]);
+							// alert(price)
+							$(this).parent().parent().next().text("￥" + (price * n).toFixed(2))
+							getSum()
+						});
+						$(".jie").click(function() {
+							var n = parseInt($(this).siblings("#goods_number_2374896").val());
+							if (n <= 1) {
+								return;
+							}
+							n--;
+							$(this).siblings("#goods_number_2374896").val(n);
+							var price = parseFloat($(this).parent().parent().prev().text().split("￥")[1]);
+							$(this).parent().parent().next().text("￥" + (price * n).toFixed(2))
+							getSum()
+						})
+
+						function getSum() {
+							var money = 0;
+							$(".xiaoji").each(function(index, n) {
+								money += parseFloat($(n).text().split("￥")[1]);
+								$(".jixu span").text('总计：￥' + money.toFixed(2));
+							})
+						}
+						// $(".jixu span").click(function(){
+						// 	var m = $(this).text().split("￥")[1]
+						// 	alert(m)
+						// })
+					})
+				</script>
+				<table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="display:none">
+					<tbody>
+						<tr>
+							<td bgcolor="#ffffff">
+								购物金额小计 ￥138.00，比市场价 ￥138.00 节省了 ￥0.00 (0%) </td>
+							<td align="right" bgcolor="#ffffff">
+								<input type="button" value="清空购物车" class="bnt_blue_1" onclick="location.href='flow.php?step=clear'">
+								<input name="submit" type="submit" class="bnt_blue_1" value="更新购物车">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="jixu">
+					<p class="head"><label>可选好利来专属附加产品<i></i></label><!-- <font style="color:red;float:right; margin-right:10px;">满200五环内 免运费 -->
+						<a href="http://www.holiland.com/cake.php">继续购物</a><!-- </font> -->
+					</p>
+				</div>
+				<div class="gouwuche gouwuche_pro" ">
+					<table class=" xq" cellspacing="0" cellpadding="0" style="width:996px;">
+					<tbody>
+						<tr>
+							<th><span style="padding-left:98px; text-align:left; width:260px">商品信息</span></th>
+							<!-- <TH><SPAN>商品编号</SPAN></TH> -->
+							<th><span>单价</span></th>
+							<th><span>操作</span></th>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+				<script type="text/javascript">
+					$(function() {
+						$('.head label').click(function() {
+							if ($(this).hasClass('up')) {
+								$(this).removeClass('up');
+							} else {
+								$(this).addClass('up');
+							}
+						});
+
+						$('.head label').click(function() {
+							if ($(this).hasClass('up')) {
+								$('.gouwuche_pro').slideDown();
+							} else {
+								$('.gouwuche_pro').slideUp();
+							}
+						})
+					})
+				</script>
+				<div class="jixu dd" style="margin-top: 20px;">
+					<p class="xu" style="width:740px">
+						<a style="float:left;cursor:pointer;" class="a_check_all"><input type="checkbox" name="ckeck_all" style="margin-right:10px;display:block">全选</a>&nbsp;&nbsp;
+						<a href="javascript:;" style="float:left;margin-left:15px;" class="del_ids">×删除选中商品</a>
+					</p>
+					<span>总计：￥138.00</span>
+					<div id="submitid"><a class="next" href="flow.php?step=checkout">下一步</a></div>
+				</div>
+				<input type="hidden" name="step" value="update_cart">
+			</form>
+		</div>
+		<div class="sorad_list" style="overflow: hidden;">
+			<h4>更多精彩</h4>
+			<div id="aebiz_center02">
+				<ul>
+				</ul>
+			</div>
+			<div id="hll_right01" class="rightsor"></div>
+		</div>
+		<div class="h_footerhelp">
+			<p style="width:976px;"> 帮助中心 <i></i></p>
+			<div class="h_footmenu" style="display:none;">
+				<dl>
+					<dt class="bg0"> <i style="background:url(http://www.holiland.com/statics/images/bj3.png) no-repeat;"></i>购物指南</dt>
+					<dd> <a href="/article.php?id=7">购物流程</a> </dd>
+					<dd> <a href="/article.php?id=9">蛋糕尺寸</a> </dd>
+				</dl>
+				<dl>
+					<dt class="bg1"> <i style="background:url(http://www.holiland.com/statics/images/bj3.png) no-repeat;"></i>订购范围</dt>
+					<dd> <a href="/article.php?id=12">地图查询</a> </dd>
+					<dd> <a href="/article.php?id=13">团购业务</a> </dd>
+				</dl>
+				<dl>
+					<dt class="bg2"> <i style="background:url(http://www.holiland.com/statics/images/bj3.png) no-repeat;"></i>公司服务</dt>
+					<dd> <a href="/article.php?id=44">北京门店</a> </dd>
+					<dd> <a href="/article.php?id=77">官网营业资质</a> </dd>
+				</dl>
+				<dl>
+					<dt class="bg3"> <i style="background:url(http://www.holiland.com/statics/images/bj3.png) no-repeat;"></i>企业招聘</dt>
+					<dd> <a href="/article.php?id=17">好利来招聘</a> </dd>
+					<dd> <a href="/article.php?id=18">黑天鹅招聘</a> </dd>
+				</dl>
+				<dl>
+					<dt class="bg4"> <i style="background:url(http://www.holiland.com/statics/images/bj3.png) no-repeat;"></i>售后服务</dt>
+					<dd> <a href="/article.php?id=19">投诉渠道</a> </dd>
+					<dd> <a href="/article.php?id=21">客服中心</a> </dd>
+					<dd> <a href="/article.php?id=72">加盟维权</a> </dd>
+				</dl>
+				<dl>
+					<dt class="bg6"> <i></i>友情链接</dt>
+					<dd> <a href="http://www.blackswancake.com/" target="_blank">黑天鹅蛋糕官网</a> </dd>
+					<dd> <a href="http://www.luohongartmuseum.com" target="_blank">罗红摄影艺术馆</a> </dd>
+					<dd> <a href="http://www.baidu.com/" target="_blank">百度</a> </dd>
+				</dl>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(".h_footerhelp p").click(function() {
+				$(".h_footmenu").slideToggle();
+				if ($(this).hasClass('up')) {
+					$(this).removeClass('up');
+				} else {
+					$(this).addClass('up')
+				}
+			})
+		</script>
+		<div class="h_footer">
+			<span>
+				<p> Copyright2010 ©北京市好利来食品有限公司 版权所有 <br>京icp备15012142号 <br>好利来官方邮箱：info@holiland.com <br><!-- 好利来建议邮箱：jianyi@holiland.com <br> -->
+				</p>
+				<p>客服电话：400-700-5999</p>
+				<p>注册地址：北京市朝阳区观音堂文化大道甲6号北201室<br>食品流通许可证号：<br>统一社会信用代码：91110105721420005Y</p>
+			</span>
+			<div class="h_footerright">
+				<h4> FOLLOW US </h4>
+				<div class="jiathis_style_24x24 h">
+					<a class="jiathis_button_tsina"></a>
+					<a class="h_weixin"></a>
+				</div>
+				<div class="h_fenxiang">
+					<p> 在微信上关注我们 </p>
+					<img src="./img/index/weixin.jpg">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(".h_footer .h_footerright .h_weixin").hover(function() {
+				$(".h_fenxiang").slideDown();
+			}, function() {
+				$(".h_fenxiang").slideUp();
+			});
+			// $(".h_footer .h_footerright .h_").mouseover(function(){
+			//   $(".h_fenxiang").slideUp();
+			// });
+		</script>
+	</body>
+</html>

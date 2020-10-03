@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/cart.css" />
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- 标题 -->
+		<div class="login_bt" style="text-align:center; padding-left:0; width:996px; background:#fff;">
+			<span style="float:left; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+			<span style="width:10%; display:inline-block; color:#909090; font-weight:bold;">购物车</span>
+			<span style="float:right; width:45%; display:inline-block; border-top:1px dashed #d5d5d5; margin-top:14px;"></span>
+		</div>
+
+		<!-- 购物车 -->
+		<div class="gouwuche">
+			<form id="formCart" name="formCart" method="post" action="flow.php">
+				<table class="xq" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr>
+							<th class="sa"><span style="text-align:left; padding-left:98px;">商品名称</span></th>
+							<th class="sb"><span>属性</span></th>
+							<th class="sc"><span>积分</span></th>
+							<th class="sd"><span style="width:90px">单价</span></th>
+							<th class="se"><span style="width:130px">购买数量</span></th>
+							<th class="se"><span style="width:90px">小计</span></th>
+							<th class="sf" align="center"><span style="width:85px">操作</span></th>
+						</tr>
+						<!-- 第一行 -->
+						<tr class="b_line">
+							<td bgcolor="#ffffff" align="center">
+								<dl style="margin-left:-10px;">
+									<dd><input type="checkbox" style="margin-top:100%" value="2374499" name="ids" checked="checked" class="ids"></dd>
+									<dt><a href="detailed.php?id=1350"><img src="http://img.holiland.com/images/202005/thumb_img/1350_thumb_G_1589832758785.jpg"
+											 width="60" align="absMiddle" height="60"></a>&nbsp;&nbsp; </dt>
+									<dd style="line-height:60px;">
+										<p>
+											<a href="detailed.php?id=1350">好利来×小马宝莉联名云朵芝士</a>
+										</p>
+										<!-- <label style="width:auto;">此商品性质不</label>
+							<label style="width:auto;">编号 LMK001350</label> -->
+									</dd>
+								</dl>
+							</td>
+							<td style="padding-left:20px;"></td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">42积分</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="price">
+								￥42.00<br>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<div style="TEXT-ALIGN: center; MARGIN-LEFT: 0px">
+									<a id="jian" class="minus">-</a>
+									<input id="goods_number_2374499" class="bg nums" maxlength="4" size="3" value="1" name="goods_number[2374499]"
+									 autocomplete="off" style="    margin-left: 3px;">
+									<a id="jian" style="TEXT-DECORATION: none" class="plus">+</a>
+								</div>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="totalprice">￥42.00</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<a  class="delete" href="javascript:;">删除</a>
+								<!-- <a href="flow.php?step=drop_to_collect&amp;id=2374499" class="f6 opAjax" data-msg="确定放入收藏夹？">放入收藏夹</a> -->
+							</td>
+						</tr>
+						
+						<tr class="b_line">
+							<td bgcolor="#ffffff" align="center">
+								<dl style="margin-left:-10px;">
+									<dd><input type="checkbox"  class="ids"  style="margin-top:100%"  name="ids" checked="checked"></dd>
+									<dt><a><img src="http://img.holiland.com/images/202008/thumb_img/1399_thumb_G_1596575435394.jpg"
+											 width="60" align="absMiddle" height="60"></a>&nbsp;&nbsp; </dt>
+									<dd style="line-height:60px;">
+										<p>
+											<a>半熟花花马卡龙-七夕情人节礼盒</a>
+										</p>
+									</dd>
+								</dl>
+							</td>
+							<td style="padding-left:20px;">半熟花花马卡龙 4枚/盒 (4种口味)</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">62积分</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="price">
+								￥62.00<br>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<div style="TEXT-ALIGN: center; MARGIN-LEFT: 0px">
+									<a id="jian" class="minus">-</a>
+									<input id="goods_number_2374499" class="bg nums" maxlength="4" size="3" value="1" name="goods_number[2374499]"
+									 autocomplete="off" style="    margin-left: 3px;">
+									<a id="jian" style="TEXT-DECORATION: none" class="plus">+</a>
+								</div>
+							</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff" class="totalprice">￥124.00</td>
+							<td style="padding-left:20px;" bgcolor="#ffffff">
+								<a onclick="javascript:;" class="delete" href="javascript:;">删除</a>
+								<!-- <a href="flow.php?step=drop_to_collect&amp;id=2374496" class="f6 opAjax" data-msg="确定放入收藏夹？">放入收藏夹</a> -->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table width="99%" align="center" border="0" cellpadding="5" cellspacing="1" bgcolor="#dddddd" style="display:none">
+					<tbody>
+						<tr>
+							<td bgcolor="#ffffff">
+								购物金额小计 ￥166.00，比市场价 ￥166.00 节省了 ￥0.00 (0%) </td>
+							<td align="right" bgcolor="#ffffff">
+								<input type="button" value="清空购物车" class="bnt_blue_1" >
+								<input name="submit" type="submit" class="bnt_blue_1" value="更新购物车">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="jixu">
+					<p class="head"><label class="">可选好利来专属附加产品<i></i></label><!-- <font style="color:red;float:right; margin-right:10px;">满200五环内 免运费 -->
+						<a href="http://www.holiland.com/cake.php">继续购物</a><!-- </font> -->
+					</p>
+				</div>
+				<div class="gouwuche gouwuche_pro" style="display: none;">
+					<table class="xq" cellspacing="0" cellpadding="0" style="width:996px;">
+						<tbody>
+							<tr>
+								<th><span style="padding-left:98px; text-align:left; width:260px">商品信息</span></th>
+								<!-- <TH><SPAN>商品编号</SPAN></TH> -->
+								<th><span>单价</span></th>
+								<th><span>操作</span></th>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="jixu dd">
+					<p class="xu" style="width:740px">
+						<a style="float:left;cursor:pointer;" class="a_check_all"><input type="checkbox" id="all" name="ckeck_all" style="margin-right:10px;">全选</a>&nbsp;&nbsp;
+						<a href="javascript:;" style="float:left;margin-left:15px;" class="del_ids">×删除选中商品</a>
+					</p>
+					<span>总计：￥166.00</span>
+					<div id="submitid"><a class="next" href="flow.php?step=checkout">下一步</a></div>
+				</div>
+				<input type="hidden" name="step" value="update_cart">
+			</form>
+		</div>
+		
+		<script type="text/javascript">
+
+			$("#all").click(function(){
+				//当全选按钮选中时，下面也选中，全选按钮不选中，下面也不选中
+				//设置每个商品的选中状态与全选按钮的选中状态一致
+				$(".ids").prop("checked",$(this).prop("checked"));
+			})
+			
+			//为+添加点击事件
+			$(".plus").click(function(){
+				//获取当前数量
+				var count = parseInt($(this).siblings("input").val());
+				//数量+1
+				count++;
+				$(this).siblings("input").val(count);
+				//获取单价
+				var price= parseFloat($(this).parent().parent().siblings(".price").text().split("￥")[1]);
+				//获取小计
+				$(this).parent().parent().siblings(".totalprice").html("￥"+(price*count).toFixed(2));
+				// getTotal();
+			})
+			//为-添加点击事件
+			$(".minus").click(function(){
+				//获取当前数量
+				var count = parseInt($(this).siblings("input").val());
+				// alert(typeof count);
+				//判断当前数量是否为1
+				if(count<=1){
+					return;
+				}
+				count--;
+				$(this).siblings("input").val(count);
+				var price= parseFloat($(this).parent().parent().siblings(".price").text().split("￥")[1]);
+				// alert(price);
+				//获取小计
+				$(this).parent().parent().siblings(".totalprice").html("￥"+(price*count).toFixed(2));
+				// getTotal();
+			})
+			
+			//删除
+			$(".delete").click(function(){
+				// alert("请确认是否删除");
+				if(confirm("请确认是否删除")){
+					//确认删除
+					$(this).parent().parent().remove();
+				}
+			})
+			//计算合计
+// 			function getTotal(){
+// 				var ids = $(".ids");
+// 				var num=0;
+// 				for(var i=0;i<ids.length;i++){
+// 					 if(ids[i].checked){
+// 						var price = parseFloat($(this).parents("tbody").find("totalprice").text().split("￥")[1]);
+// 						alert(typeof price)
+// 						alert(price)
+// 						num+=price;			
+// 					 }
+// 				}
+// 				$(".xu span").html("￥"+num)
+// 			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,198 @@
+body {
+    width: 996px;
+    font-family: ΢���ź�;
+    font-size: 13px;
+    color: rgb(98, 98, 98);
+    text-size-adjust: none;
+    margin: 0px auto;
+    padding: 0px;
+}
+.login_bt {
+    OVERFLOW: hidden;
+    FONT-SIZE: 16px;
+    HEIGHT: 30px;
+    WIDTH: 986px;
+    BACKGROUND: #ededed;
+    PADDING-LEFT: 10px;
+    MARGIN: 10px auto;
+    LINE-HEIGHT: 30px;
+}
+	
+.gouwuche {
+    /* OVERFLOW: hidden; */
+    WIDTH: 996px;
+    MARGIN: 0px auto;
+}
+.gouwuche TABLE.xq {
+    /* OVERFLOW: hidden; */
+    WIDTH: 990px;
+    MARGIN: 0px;
+}
+.gouwuche TABLE.xq TR {
+    LINE-HEIGHT: 22px;
+}
+.gouwuche TABLE.xq TH {
+    HEIGHT: 27px;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    LINE-HEIGHT: 27px;
+    background: #ededed;
+}
+.gouwuche TABLE.xq TH SPAN {
+    BACKGROUND: #ededed;
+    PADDING-LEFT: 20px;
+    MARGIN: 0px 5px 0px 0px;
+    DISPLAY: inline-block;
+    text-align: center;
+}
+.gouwuche TABLE.xq TR.b_line {
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+}
+.gouwuche TABLE.xq TR TD {
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    /* PADDING-LEFT: 20px; */
+    text-align: center;
+}
+.gouwuche TABLE.xq DL {
+    WIDTH: auto;
+    MARGIN: 10px 0px 0px -20px;
+}
+.gouwuche TABLE.xq DL DD {
+    FONT-SIZE: 14px;
+    FLOAT: left;
+    TEXT-ALIGN: left;
+    MARGIN-LEFT: 10px;
+}
+.gouwuche TABLE.xq TR TD INPUT {
+    BORDER-TOP: #d5d5d5 1px solid;
+    HEIGHT: 20px;
+    BORDER-RIGHT: #d5d5d5 1px solid;
+    WIDTH: 20px;
+    BACKGROUND: #fff;
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    PADDING-BOTTOM: 0px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    BORDER-LEFT: #d5d5d5 1px solid;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 20px;
+    PADDING-RIGHT: 0px;
+    MARGIN-RIGHT: 3px;
+}
+.gouwuche TABLE.xq DL DT {
+    OVERFLOW: hidden;
+    HEIGHT: 65px;
+    WIDTH: 65px;
+    FLOAT: left;
+    PADDING-BOTTOM: 10px;
+}
+a {
+    color: rgb(98, 98, 98);
+    font-family: ΢���ź�;
+    text-decoration: none;
+    outline: none;
+}
+
+.gouwuche TABLE.xq TR TD A.jian {
+    CURSOR: pointer;
+    BORDER-TOP: #d5d5d5 1px solid;
+    HEIGHT: 20px;
+    BORDER-RIGHT: #d5d5d5 1px solid;
+    WIDTH: 20px;
+    BACKGROUND: #fff;
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    PADDING-BOTTOM: 0px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    BORDER-LEFT: #d5d5d5 1px solid;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 20px;
+    PADDING-RIGHT: 0px;
+}
+
+.gouwuche TABLE.xq TR TD INPUT {
+    BORDER-TOP: #d5d5d5 1px solid;
+    HEIGHT: 20px;
+    BORDER-RIGHT: #d5d5d5 1px solid;
+    WIDTH: 20px;
+    BACKGROUND: #fff;
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    PADDING-BOTTOM: 0px;
+    TEXT-ALIGN: center;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 0px;
+    BORDER-LEFT: #d5d5d5 1px solid;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 20px;
+    PADDING-RIGHT: 0px;
+    MARGIN-RIGHT: 3px;
+}
+.jixu {
+    POSITION: relative;
+    TEXT-ALIGN: right;
+}
+.jixu P.head {
+    HEIGHT: 30px;
+    LINE-HEIGHT: 30px;
+}
+.jixu P.head LABEL {
+    BORDER-TOP: #d5d5d5 1px;
+    HEIGHT: 30px;
+    BORDER-RIGHT: #d5d5d5 1px solid;
+    WIDTH: 200px;
+    BACKGROUND: #ededed;
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    FLOAT: left;
+    TEXT-ALIGN: left;
+    PADDING-LEFT: 20px;
+    BORDER-LEFT: #d5d5d5 1px solid;
+    LINE-HEIGHT: 30px;
+}
+.jixu P.head A {
+    COLOR: #6bc4df;
+    PADDING-RIGHT: 10px;
+}
+.jixu P.xu {
+    HEIGHT: 60px;
+    WIDTH: 740px;
+    FLOAT: left;
+    LINE-HEIGHT: 60px;
+}
+.jixu SPAN {
+    MARGIN-BOTTOM: 20px;
+    FONT-SIZE: 16px;
+    BORDER-TOP: #d5d5d5 1px solid;
+    HEIGHT: 60px;
+    BORDER-RIGHT: #d5d5d5 1px solid;
+    WIDTH: 230px;
+    BACKGROUND: #ededed;
+    BORDER-BOTTOM: #d5d5d5 1px solid;
+    TEXT-ALIGN: left;
+    PADDING-LEFT: 20px;
+    BORDER-LEFT: #d5d5d5 1px solid;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 60px;
+}
+.jixu #submitid {
+    RIGHT: 10px;
+    POSITION: absolute;
+    TOP: 16px;
+}
+
+.jixu #submitid A {
+    FONT-SIZE: 14px;
+    HEIGHT: 30px;
+    BACKGROUND: #ededed;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 13px;
+    DISPLAY: inline-block;
+    LETTER-SPACING: 0.2em;
+    LINE-HEIGHT: 30px;
+    PADDING-RIGHT: 13px;
+}
+.jixu #submitid A {
+    BACKGROUND: #ff0;
+}

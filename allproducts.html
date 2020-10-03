@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全部产品</title>
+		<link  rel="stylesheet" href="css/iconfont.css"/>
+		<link  rel="stylesheet" href="css/daohanglan.css"/>
+		<link rel="stylesheet" type="text/css" href="css/allproducts.css"/>
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/h_footerhelp.css"/>
+	</head>
+	<body>
+		<div class="h_head">
+			<div style="float: left;" class="logo">
+				<a href="shouye.html">
+					<img src="http://www.holiland.com/statics/images/logo.png" />
+				</a>
+			</div>
+			<div style="float:right;" class="head_right">
+				<div class="h_login">
+					<label class="dz_lo">
+						<a>
+							<i class="iconfont icon-location"></i>
+							北京
+						</a>
+					</label>
+					<span class="car">
+						<span class="iconfont icon-gouwuche"></span>
+						<b id="good_count">0</b>
+						件
+						<b id="cart_total_price"></b>
+					</span>
+					<label class="lable1">
+						<a href="login.html">登录&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						<a href="register.html">注册</a>
+					</label>
+				</div>
+				<div class="h_dizhi"></div>
+				<div class="baner">
+					<div class="row-one">
+						<a href="allproducts.html">
+						All Procucts<br/>&nbsp;&nbsp;全部产品					
+						</a>
+					</div>
+					<div class="row-one">
+						<div class="box">
+							<div class="cake">
+								<a href="cakexl.html">
+								Cake Series<br/>&nbsp;&nbsp;蛋糕系列
+								</a>
+								<div class="mask">
+									<ul class="sub_nav">
+										<li>
+											<a href="history.html">经典系列</a>
+										</li>
+										<li>
+											<a href="children.html">儿童系列</a>
+										</li>
+										<li>
+											<a href="love.html">尊爱系列</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-one">
+						<a href="Wagashi.html">
+						Wagashi<br/>零食糕点				
+						</a>
+					</div>
+					<div class="row-one">
+						<a href="aboutus.html">
+						About Us<br/>&nbsp;关于我们
+						</a>
+					</div>
+					</div>
+				<div class="h_phone">
+					<a class="iconfont icon-weibiaoti">
+						400-700-5999
+					</a>
+				</div>
+				<div class="h_navserch" style="float:right;">
+					<form name="psForm" id="searchform">
+						<input length="20"name="keywords"type="text" />
+						<a class="iconfont icon-search"></a>
+						&nbsp;
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="hll_listBox">
+			<div class="sorad_list">
+				<ul class="ull">
+					<!-- <li>
+						<div class="zstu">
+							<a href="detail.html">
+								<img src="./img/经典系列/提拉米苏.jpg" alt="...">
+							</a>
+						</div>
+						<div class="xx">	
+								<p></p>
+								<label></label>
+								<b></b>
+						</div>
+					</li> -->
+				
+			
+				</ul>
+			</div>	
+		</div>
+		
+		
+	
+		</div>
+		<script>
+		    $(document).ready(function(){
+		      $(".icon-icon_jiantou").click(function(){
+		       // alert(123);
+				$(".h_footmenu").slideToggle();
+		      });
+			  $(".icon-gouwuche").click(function(){
+			   // alert(123);
+			   window.location.href="shoppingcar.html";
+			  });
+			  $(".icon-search").click(function(){
+			   // alert(123);
+			   window.location.href="history.html";
+			  });
+		    });
+			
+			//跨域访问   动态获取图片
+			$.ajax({
+				url: "http://localhost:8081/product/all",
+				success: function(cake) {				
+					for (var i = 0; i < cake.length; i++) {
+						var image = cake[i].image;
+						var pname = cake[i].pname;
+						var price = cake[i].price;
+						var id = cake[i].pid;
+						var describle = cake[i].describle;
+						var li = '<li><div class="zstu" id="'+id+'"><a><img src=" '+image+'" alt="..."></a></div><div class="xx"><p>'+pname+'</p><label>'+describle+'</label><b>￥'+price+'</b></div></li>'
+						
+						$("ul[class='ull']").append(li);
+						
+						
+						var id = "";		
+							//当鼠标点击商品的时候,根据商品的id查询详情
+							//给点击对象添加id属性在遍历的时候循环赋值.然后在通过attr()取出属性
+							 $(function() {
+								$(".zstu").click(function() {
+									id = $(this).attr("id");
+									// alert(id);
+									 window.localStorage.setItem('pid',id);						
+									 window.location.href="detail.html?id="+id;								
+								})
+							})
+						
+					}
+					
+				}
+			});
+			
+		
+			
+		</script>
+		
+	</body>
+</html>

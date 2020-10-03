@@ -1,0 +1,375 @@
+body{
+	width: 996px;
+	margin: 0 auto;
+	font-size: 13px;
+	color: #626262
+}
+/* 结算 */
+.login_bt{
+	OVERFLOW: hidden;
+    FONT-SIZE: 16px;
+    HEIGHT: 30px;
+    MARGIN: 10px auto;
+    LINE-HEIGHT: 30px;
+	text-align: center;
+    padding-left: 0;
+    width: 996px;
+    background: #fff;
+}
+.left_line{
+    float: left;
+    width: 45%;
+    display: inline-block;
+    border-top: 1px dashed #d5d5d5;
+    margin-top: 14px;
+}
+
+.goPay{
+	width: 10%;
+    display: inline-block;
+    color: #909090;
+    font-weight: bold;
+}
+.right_line{
+	float: right;
+	width: 45%;
+	display: inline-block;
+	border-top: 1px dashed #d5d5d5;
+	margin-top: 14px
+}
+
+/* 配送信息 */
+.shuohuo {
+	padding: 10px;
+
+}
+.head{
+	border-top: 1px solid #D6D5D5;
+    border-bottom: 1px solid #D6D5D5;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 15px;
+    font-size: 15px;
+}
+/* 送货上门 ， 门店自取 */
+.shr{
+	margin-left: 10px 0 0;
+	padding: 0;
+}
+.list{
+	margin-left: 25px;
+    height: auto;
+	background-color: #fff;
+	
+}
+.field{
+	display: inline-block;
+	width: 100%;
+	font-size: 13px;
+	color: #626262
+}
+.field label{
+	argin-right: 25px;
+}
+/* 收货信息 */
+.form{
+	margin: 9px 0 0 30px;
+}
+ h3{
+	font-size: 16px;
+    color: #87d0e3;
+	margin: 0px;
+	padding: 0px;
+}
+.label{
+	line-height: 20px;
+    padding-top: 12px;
+    display: block;
+	font-size: 13px;
+    color: #626262;
+}
+.list{
+	position: relative;
+}
+.list em{
+	font-style: normal;
+	color: #F00;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-left: 2px;
+}
+
+.list select{
+	margin-right: 5px;
+    color: #626262;
+	
+}
+/* 详细地址 */
+.textbox{
+	float: left;
+    padding-left: 10px;
+    width: 350px;
+    height: 30px;
+    outline: none;
+    line-height: 30px;
+	border: 1px solid #CCC;
+	/* background-color: rgb(232, 240, 254) !important; */
+}
+
+.list .status {
+    background: url(../img/提示条.png) no-repeat;
+    height: 25px;
+    padding: 5px 20px 0px 25px;
+    line-height: 22px;
+    position: absolute;
+    left: 380px;
+    top: 34px;
+}
+
+/* 订货人信息 */
+.label dinghr{
+	float: left;
+}
+.forma .same {
+	float: right;
+}
+a{
+	text-decoration: none;
+    color: #626262;
+    font-family: "΢���ź�";
+    outline: none;
+}
+.same a {
+    color: #87d0e3;
+}
+ 
+.form-btn  {
+	margin-top: 10px;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    width: 170px;
+    background: none repeat scroll 0% 0% #ff0;
+    font-size: 16px;
+} 
+
+/* 收货日期 */
+ .peisong input.textbox {
+    width: 200px;
+    background: url(../../statics/images/bj_5.png) no-repeat scroll -38px 0px transparent;
+    background-position: 97% 50%;
+}
+
+/* 订单详情 */
+.xiangqing table.xq {
+    border-collapse: collapse;
+    margin: 10px 0 0 12px;
+    width: 966px;
+    overflow: hidden;
+}
+.xiangqing table.xq tr {
+    line-height: 22px;
+}
+.xiangqing table.xq th {
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+}
+.xiangqing table.xq span {
+    width: 175px;
+    display: inline-block;
+    margin: 10px 5px 5px 0px;
+    background: #ededed;
+    padding-left: 20px;
+}
+.xiangqing table.xq tr.b_line {
+    border-bottom: 1px solid #D6D5D5;
+}
+.xiangqing table.xq dl {
+    width: 220px;
+    margin: 10px 0px 0px -20px;
+}
+.xiangqing table.xq dl dt {
+    height: 65px;
+    width: 65px;
+    float: left;
+    overflow: hidden;
+}
+.xiangqing table.xq dl dd {
+    float: left;
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.xiangqing table.xq tr.b_line td textarea {
+    color: #626262;
+    width: 297px;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #d6d5d5;
+	margin-left: 30px;
+}
+
+.h_fy {
+    position: relative;
+    width: 966px;
+    margin-top: 10px;
+    min-height: 220px;
+}
+.h_fy_right {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    float: right;
+}
+.h_fy .h_fy_left {
+    float: left;
+    margin-left: 15px;
+}
+#showmoney {
+    font-size: 14px;
+}
+.h_fy_right b {
+    margin-left: 5px;
+    font-size: 20px;
+    color: #2093CC;
+}
+.h_fy_right textarea.bak {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #D5D5D5;
+    padding: 10px;
+    font-size: 13px;
+}
+.h_fy_right span.tijiao {
+    cursor: pointer;
+    width: 170px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 16px;
+    background: #FF0;
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    margin: 10px 0px 0px 349px;
+}
+
+.h_fy .h_fy_left {
+    float: left;
+    margin-left: 15px;
+}
+.h_fy_left i {
+    vertical-align: middle;
+    display: inline-block;
+    width: 22px;
+    height: 15px;
+    margin: 0px -16px;
+    background: url(../img/经典系列/pp.png) repeat scroll 4px -83px transparent;
+    margin-top: -9px;
+}
+#showyouhui .showyh {
+    margin-top: -10px;
+}
+.h_fy_left p.hh {
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.fapiao .fpneirong .item {
+    float: left;
+    margin: 0px 0px 15px 0px;
+}
+
+
+.WdateDiv {
+    width: 180px;
+    background-color: #FFFFFF;
+    border: #bbb 1px solid;
+    padding: 2px;
+	margin-left: 25px;
+	margin-top:5px
+}
+
+.WdateDiv #dpTitle {
+    height: 24px;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+.WdateDiv .WdayTable {
+    line-height: 20px;
+    border: #c5d9e8 1px solid;
+}
+.WdateDiv * {
+    font-size: 8pt;
+}
+
+.WdateDiv .NavImgll a {
+    float: left;
+    background: transparent url(../img/图标.gif) no-repeat scroll 0 0;
+}
+
+.WdateDiv .NavImg a {
+    display: block;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+.WdateDiv .MMenu {
+    margin-top: 20px;
+    *width: 62px;
+}
+
+.WdateDiv .menuSel {
+    z-index: 1;
+    position: absolute;
+    background-color: #FFFFFF;
+    border: #ccc 1px solid;
+    display: none;
+}
+
+.WdateDiv .yminput {
+    margin-top: 2px;
+    text-align: center;
+    height: 20px;
+    border: 0px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.WdateDiv .WdayTable {
+    line-height: 20px;
+    border: #c5d9e8 1px solid;
+}
+.WdateDiv .WinvalidDay {
+    color: #aaa;
+}
+.WdateDiv .WdayTable td {
+    text-align: center;
+}
+.WdateDiv .Wwday {
+    cursor: pointer;
+    color: #FF2F2F;
+}
+.WdateDiv .WotherDay {
+    cursor: pointer;
+    color: #6A6AFF;
+}
+.WdateDiv #dpControl {
+    text-align: right;
+}
+.WdateDiv .dpButton {
+    height: 20px;
+    width: 45px;
+    border: #ccc 1px solid;
+    margin-top: 2px;
+    margin-right: 1px;
+}

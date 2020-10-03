@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>结算</title>
+		<link rel="stylesheet" type="text/css" href="css/address.css" />
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<div class="login_bt">
+			<span class="left_line"></span>
+			<span class="goPay">结算</span>
+			<span class="right_line"></span>
+		</div>
+
+		<div class="shuohuo">
+			<p class="head">
+				<span>配送信息</span>
+			</p>
+			<div class="shr">
+				<div class="list">
+					<div class="field">
+						<input type="radio" name="shipping" id="radio01" class="shipping" checked="checked" value="0"/>&nbsp;
+						<label  id="song">送货上门</label>
+						<input type="radio" name="shipping" id="radio02" value="1" />&nbsp;
+						<label  id="qu">门店自取</label>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 收货信息 -->
+		<div id="address">
+			<div class="shuohuo"  id="shouhuo">
+				<div class="head">
+					<span class="ship_title">收货信息</span>
+				</div>
+				<div class="shr">
+					<div class="form">
+						<div class="new_add">
+							<h3 class="ship_title">收货人信息</h3>
+						</div>
+						<div class="list" style="margin-left: 0px;">
+							<span class="label">
+								选择地区
+								<em>*</em>
+							</span>
+							<div class="field">
+								<div class="xx">
+									<table cellpadding="0" cellspacing="1">
+										<tbody>
+											<tr>
+												<td>
+													<input type="hidden" name="country" id="country" value="" />
+													<select id="selProvince" class="region_parent" name="province">
+														<option value="2" selected="selected">北京</option>
+													</select>
+												</td>
+												<td>
+													<select id="selCity" class="region_parent" name="city">
+														<option value="52" selected="selected">北京</option>
+													</select>
+												</td>
+												<td>
+													<select id="selDistrict" class="district" name="district">
+														<option value>请选择县区</option>
+														<option value="">东城区</option>
+														<option value="">西城区</option>
+														<option value="">海淀区</option>
+													</select>
+												</td>
+												<td>
+													<select id="mendian" class="area_info" name="huan">
+														<option value>请选择街道</option>
+														<option value="">全区内</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<!-- 详细地址 -->
+
+						<div class="list xiangxidizhi" style="margin-left: 0px;">
+							<span class="label">详细地址<em>*</em> </span>
+							<div class="field">
+								<input name="address" value="" class="textbox address_info" type="text">
+							</div>
+							<div class="status status0" id="detailAddress">
+								<span data-content="请填写详细街道地址及门牌号">请填写详细街道地址及门牌号</span>
+							</div>
+							<div style="width:100%;margin-top:5px; color:red; display:none;" id="shippingAddressTips">不在配送范围内 ，请更换快递派送方式</div>
+							<ul id="addressKeyBox" style="width: 360px; border: 1px solid #ccc; border-top: none; position: absolute; z-index:99999; background:#fff; top:65px; display:none;"></ul>
+						</div>
+
+
+						<script>
+							$(function(){
+								$(".field input ").focus(function(){
+									// $('.status').show();
+									$(this).parent(".field").nextAll(".status").show();
+									console.log($(this).parent(".field").nextAll(".status"));
+// 							
+								});
+								$(".field input ").blur(function(){
+									$(this).parent(".field").nextAll(".status").hide();
+								});
+								
+							})
+						</script>
+
+
+						<!-- 收货人姓名 -->
+						<div class="list full-address" style="margin-left: 0px;">
+							<span class="label shouhuoren">收货人姓名<em>*</em> </span>
+							<div class="field">
+								<input name="consignee" value="" class="textbox username" type="text">
+							</div>
+							<div class="status1 status" id="name" style="display: none;">
+								<span>例如 王先生 或者 李女士</span>
+							</div>
+						</div>
+
+						<!-- 收货人手机号码 -->
+						<div class="list" style="margin-left: 0px;">
+							<span class="label shouhuoshouji">收货人手机号码<em>*</em> </span>
+							<div class="field">
+								<input name="mobile" value="" class="textbox phone" type="text" maxlength="11">
+							</div>
+							<div class="status2 status" id="mobileTelephone" style="display: none;">
+								<span>请正确输入收货人的手机号，方便蛋糕顺利送达</span>
+							</div>
+						</div>
+						<!-- 订货人信息 -->
+						<div class="forma" id="dinghuoren" style="margin-top:20px;">
+							<h3 chass="dinghr">
+								订货人信息
+							</h3>
+							<div class="list" style="margin-left: 0px;">
+								<div class="label dinghr">订货人手机号码（接收短信）<em>*</em>
+									<div class="same">
+										<!-- <a href="javascript:;" class="copy"> 与收货人信息相同 </a> -->
+									</div>
+								</div>
+								<div class="field">
+									<input name="person_phone" value="" class="textbox person_phone" type="text" maxlength="11">
+								</div>
+								<div class="status status6" id="ordererMobile" style="display: none;">
+									<span>请正确输入收货人的手机号，方便蛋糕顺利送达</span>
+								</div>
+							</div>
+						</div>
+						
+							<!-- 收货日期 -->
+						<div class="shouhuo peisong">
+							<p class="head" style="margin-left: 6px;">
+								<span>收货日期</span>
+							</p>
+							<div class="shr shre" style="margin:0;padding:0">
+								<div class="list list_date bestTimeBox" margin-left: 25px;">
+									<!-- <span class="label" style="height:20px; line-height:20px; padding:0">&nbsp;</span> -->
+									<input class="textbox change_dates" type="text" value="2020-10-02" name="deliverdate" maxlength="16" size="10"
+									 onfocus="WdatePicker({startDate:'%y-%M-%02',dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,minDate:'2020-10-02',onpicking:function(dp){return get_times(dp.cal.getNewDateStr());}})"
+									 readonly="">
+									<i></i>
+									<div class="field" style="width:700px;">
+										<select style="margin-top:1px;margin-left:2%;height:30px;" name="delivertime" onchange="javascript:void(this.value);setBestTime(this);"
+										 class="option">
+											<option value="13:00">13:00</option>
+											<option value="13:30">13:30</option>
+											<option value="14:00">14:00</option>
+											<option value="14:30">14:30</option>
+											<option value="15:00">15:00</option>
+											<option value="15:30">15:30</option>
+											<option value="16:00">16:00</option>
+											<option value="16:30">16:30</option>
+											<option value="17:00">17:00</option>
+											<option value="17:30">17:30</option>
+											<option value="18:00">18:00</option>
+											<option value="18:30">18:30</option>
+											<option value="19:00">19:00</option>
+											<option value="19:30">19:30</option>
+											<option value="20:00">20:00</option>
+											<option value="20:30">20:30</option>
+											<option value="21:00">21:00</option>
+										</select>
+										<span style="line-height:30px;height:30px;margin-left:10px;">至</span>
+										<select style="margin-top:1px;margin-left:2%;height:30px" name="deliverminute" id="bean.deliverminute" onchange="select(this);"
+										 class="option_z">
+											<option value="13:30">13:30</option>
+											<option value="14:00">14:00</option>
+											<option value="14:30">14:30</option>
+											<option value="15:00">15:00</option>
+											<option value="15:30">15:30</option>
+											<option value="16:00">16:00</option>
+											<option value="16:30">16:30</option>
+											<option value="17:00">17:00</option>
+											<option value="17:30">17:30</option>
+											<option value="18:00">18:00</option>
+											<option value="18:30">18:30</option>
+											<option value="19:00">19:00</option>
+											<option value="19:30">19:30</option>
+											<option value="20:00">20:00</option>
+											<option value="20:30">20:30</option>
+											<option value="21:00">21:00</option>
+										</select>
+									</div>
+								</div>
+						
+							</div>
+						</div>
+						<!-- 选择日期 -->
+						<div class="WdateDiv">
+							<div id="dpTitle">
+								<div class="navImg NavImgll"><a></a></div>
+								<div class="navImg NavImgl"><a></a></div>
+								<div style="float:left">
+									<div class="menuSel MMenu" style="display: none;"></div><input class="yminput">
+								</div>
+								<div style="float:left">
+									<div class="menuSel YMenu" style="display: none;"></div><input class="yminput">
+								</div>
+								<div class="navImg NavImgrr"><a></a></div>
+								<div class="navImg NavImgr"><a></a></div>
+								<div style="float:right"></div>
+							</div>
+							<div style="position: absolute; overflow: hidden; display: none; width: 180px; height: 142px;"></div>
+							<div>
+								<table class="WdayTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr class="MTitle" align="center">
+											<td>日</td>
+											<td>一</td>
+											<td>二</td>
+											<td>三</td>
+											<td>四</td>
+											<td>五</td>
+											<td>六</td>
+										</tr>
+										<tr>
+											<td class="WinvalidDay">27</td>
+											<td class="WinvalidDay">28</td>
+											<td class="WinvalidDay">29</td>
+											<td class="WinvalidDay">30</td>
+											<td class="WinvalidDay">1</td>
+											<td onclick="day_Click(2020,10,2);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wselday'"
+											 class="Wselday">2</td>
+											<td onclick="day_Click(2020,10,3);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">3</td>
+										</tr>
+										<tr>
+											<td onclick="day_Click(2020,10,4);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">4</td>
+											<td onclick="day_Click(2020,10,5);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">5</td>
+											<td onclick="day_Click(2020,10,6);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">6</td>
+											<td onclick="day_Click(2020,10,7);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">7</td>
+											<td onclick="day_Click(2020,10,8);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">8</td>
+											<td onclick="day_Click(2020,10,9);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">9</td>
+											<td onclick="day_Click(2020,10,10);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">10</td>
+										</tr>
+										<tr>
+											<td onclick="day_Click(2020,10,11);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">11</td>
+											<td onclick="day_Click(2020,10,12);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">12</td>
+											<td onclick="day_Click(2020,10,13);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">13</td>
+											<td onclick="day_Click(2020,10,14);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">14</td>
+											<td onclick="day_Click(2020,10,15);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">15</td>
+											<td onclick="day_Click(2020,10,16);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">16</td>
+											<td onclick="day_Click(2020,10,17);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">17</td>
+										</tr>
+										<tr>
+											<td onclick="day_Click(2020,10,18);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">18</td>
+											<td onclick="day_Click(2020,10,19);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">19</td>
+											<td onclick="day_Click(2020,10,20);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">20</td>
+											<td onclick="day_Click(2020,10,21);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">21</td>
+											<td onclick="day_Click(2020,10,22);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">22</td>
+											<td onclick="day_Click(2020,10,23);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">23</td>
+											<td onclick="day_Click(2020,10,24);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">24</td>
+										</tr>
+										<tr>
+											<td onclick="day_Click(2020,10,25);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">25</td>
+											<td onclick="day_Click(2020,10,26);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">26</td>
+											<td onclick="day_Click(2020,10,27);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">27</td>
+											<td onclick="day_Click(2020,10,28);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">28</td>
+											<td onclick="day_Click(2020,10,29);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">29</td>
+											<td onclick="day_Click(2020,10,30);" onmouseover="this.className='WdayOn'" onmouseout="this.className='Wday'"
+											 class="Wday">30</td>
+											<td onclick="day_Click(2020,10,31);" onmouseover="this.className='WwdayOn'" onmouseout="this.className='Wwday'"
+											 class="Wwday">31</td>
+										</tr>
+										<tr>
+											<td onclick="day_Click(2020,11,1);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">1</td>
+											<td onclick="day_Click(2020,11,2);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">2</td>
+											<td onclick="day_Click(2020,11,3);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">3</td>
+											<td onclick="day_Click(2020,11,4);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">4</td>
+											<td onclick="day_Click(2020,11,5);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">5</td>
+											<td onclick="day_Click(2020,11,6);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">6</td>
+											<td onclick="day_Click(2020,11,7);" onmouseover="this.className='WotherDayOn'" onmouseout="this.className='WotherDay'"
+											 class="WotherDay">7</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="dpTime" style="display: none;">
+								<div class="menuSel hhMenu" style="display: none;"></div>
+								<div class="menuSel mmMenu" style="display: none;"></div>
+								<div class="menuSel ssMenu" style="display: none;"></div>
+								<table cellspacing="0" cellpadding="0" border="0">
+									<tbody>
+										<tr>
+											<td rowspan="2"><span id="dpTimeStr">时间</span>&nbsp;<input class="tB" maxlength="2"><input value=":" class="tm"
+												 readonly=""><input class="tE" maxlength="2"><input value=":" class="tm" readonly=""><input class="tE"
+												 maxlength="2"></td>
+											<td><button id="dpTimeUp"></button></td>
+										</tr>
+										<tr>
+											<td><button id="dpTimeDown"></button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div id="dpQS"></div>
+							<div id="dpControl"><input class="dpButton" id="dpClearInput" type="button" value="清空"><input class="dpButton" id="dpTodayInput"
+								 type="button" value="今天"><input class="dpButton" id="dpOkInput" type="button" value="确定"></div>
+						</div>
+						
+						
+						
+
+						<!-- 保存收货信息 -->
+						<div class="form-btn form-btn2 edit_user_address">
+							<span class="baocun saveAdressForm" style="margin-left: 0px;">保存收货信息</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			<!-- 取货信息 -->
+		<div id="address">
+			<div class="shuohuo"  id="quhuo"  style="display:none">
+						<div class="head">
+							<span class="ship_title">取货信息</span>
+						</div>
+						<div class="shr">
+							<div class="form">
+								<div class="new_add">
+									<h3 class="ship_title">取货人信息</h3>
+								</div>
+								<div class="list" style="margin-left: 0px;">
+									<span class="label">
+										选择门店
+										<em>*</em>
+									</span>
+									<div class="field">
+										<div class="xx">
+											<table cellpadding="0" cellspacing="1">
+												<tbody>
+													<tr>
+														<td>
+															<select id="selDistrict" class="district" name="district">
+																<option value>请选择县区</option>
+																<option value="">东城区</option>
+																<option value="">西城区</option>
+																<option value="">海淀区</option>
+															</select>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+		
+		
+								<script>
+									$(function(){
+										$(".field input ").focus(function(){
+											// $('.status').show();
+											$(this).parent(".field").nextAll(".status").show();
+											console.log($(this).parent(".field").nextAll(".status"));
+		// 							
+										});
+										$(".field input ").blur(function(){
+											$(this).parent(".field").nextAll(".status").hide();
+										});
+										
+									})
+								</script>
+		
+		
+								<!-- 取货人姓名 -->
+								<div class="list full-address" style="margin-left: 0px;">
+									<span class="label shouhuoren">取货人姓名<em>*</em> </span>
+									<div class="field">
+										<input name="consignee" value="" class="textbox username" type="text">
+									</div>
+									<div class="status1 status" id="name" style="display: none;">
+										<span>例如 王先生 或者 李女士</span>
+									</div>
+								</div>
+		
+								<!-- 取货人手机号码 -->
+								<div class="list" style="margin-left: 0px;">
+									<span class="label shouhuoshouji">取货人手机号码<em>*</em> </span>
+									<div class="field">
+										<input name="mobile" value="" class="textbox phone" type="text" maxlength="11">
+									</div>
+									<div class="status2 status" id="mobileTelephone" style="display: none;">
+										<span>请正确输入收货人的手机号，方便蛋糕顺利送达</span>
+									</div>
+								</div>
+								<!-- 订货人信息 -->
+								<div class="forma" id="dinghuoren" style="margin-top:20px;">
+									<h3 chass="dinghr">
+										订货人信息
+									</h3>
+									<div class="list" style="margin-left: 0px;">
+										<div class="label dinghr">订货人手机号码（接收短信）<em>*</em>
+											<div class="same">
+												<!-- <a href="javascript:;" class="copy"> 与收货人信息相同 </a> -->
+											</div>
+										</div>
+										<div class="field">
+											<input name="person_phone" value="" class="textbox person_phone" type="text" maxlength="11">
+										</div>
+										<div class="status status6" id="ordererMobile" style="display: none;">
+											<span>请正确输入收货人的手机号，方便蛋糕顺利送达</span>
+										</div>
+									</div>
+								</div>
+								
+								
+		
+								<!-- 保存收货信息 -->
+								<div class="form-btn form-btn2 edit_user_address">
+									<span class="baocun saveAdressForm" style="margin-left: 0px;">保存收货信息</span>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+				
+		
+	<!-- 收货与取货的切换 -->
+		<script type="text/javascript">
+			var song = document.querySelector('#song');
+			var qu = document.querySelector('#qu');
+			var shouhuo = document.querySelector('#shouhuo');
+			var radio01 = document.querySelector('#radio01');
+			var radio02 = document.querySelector('#radio02');
+			
+			console.log(radio01);
+			
+			song.onclick = function(){
+				quhuo.style.display='none';
+				shouhuo.style.display='block';
+				radio01.checked='checked';
+			}
+			qu.onclick = function(){
+				quhuo.style.display='block';
+				shouhuo.style.display='none';
+				radio02.checked='checked';
+			}
+		</script>
+		
+		<!-- 支付详情 -->
+		<div class="shouhuo zhifu" id="zhifuUrl">
+			<p class="head" style="margin-left: 6px;">
+				<span>支付方式</span>
+				<span class="gidet change_p" style="display:none">修改</span>
+			</p>
+			<div class="moren">
+				<p id="zhifufangshi"></p>
+			</div>
+			<div class="shr" style=" margin-left: 0px; padding:0px 10px;">
+				<div class="pay" id="pay_lists" style="margin-left: 20px;">
+					<div style="margin-top:15px;">
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="12" name="payment" value="12" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment12" class="payment_s">货到付款(Pos机)</font>
+						</label>
+
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="16" name="payment" value="16" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment16" class="payment_s">货到付款(现金)</font>
+						</label>
+
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="20" name="payment" value="20" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment20" class="payment_s">货到付款（提货卡限北京\不能开设发票）</font>
+						</label>
+
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="9" name="payment" value="9" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment9" class="payment_s">银行汇款/转帐</font>
+						</label>
+
+						<div style="width:500px; margin-left:20px; margin-top:3px; display:none;" id="bank_pay_desc">
+							银行名称<br>
+							收款人信息：全称 ××× ；帐号或地址 ××× ；开户行 ×××。<br>
+							注意事项：办理电汇时，请在电汇单“汇款用途”一栏处注明您的订单号。 </div>
+					</div>
+					<div style="margin-top:15px;">
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="1" name="payment" value="1" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment1" class="payment_s">支付宝</font>
+						</label>
+
+						<label style="margin-right:15px; width:200px; display:inline-block;">
+							<input type="radio" id="17" name="payment" value="17" onclick="selectPayment(this);changePayment(this);">
+							<font id="payment17" class="payment_s">微信-在线支付</font>
+						</label>
+
+					</div>
+				</div>
+				<div class="select_pay"></div>
+			</div>
+			<!-- <div class="form-btn">
+						<span class="shrf">保存支付方式</span>
+					</div> -->
+		</div>
+
+		<!-- 订单详情 -->
+		<div class="shouhuo xiangqing">
+			<p class="head">
+				<span>订单详情</span>
+			</p>
+			<table class="xq" cellpadding="0" cellspacing="0">
+				<tbody>
+					<tr>
+						<th class="ssa">
+							<span>名称</span>
+						</th>
+						<th class="ssb">
+							<span>尺寸</span>
+						</th>
+						<th class="ssb">
+							<span>积分</span>
+						</th>
+						<th class="ssb">
+							<span>数量</span>
+						</th>
+						<th class="ssf">
+							<span>小计</span>
+						</th>
+					</tr>
+					<tr class="b_line">
+						<td>
+							<dl>
+								<dt>
+									<img src="http://img.holiland.com/images/201602/goods_img/14_G_1455939491906.jpg" width="60" align="absMiddle"
+									 height="60">
+								</dt>
+								<dd style="line-height:60px;">
+									<p>赠品蜡烛（规格:盒）</p>
+									<!-- <label>HLL000014</label> -->
+								</dd>
+							</dl>
+						</td>
+						<td style="font-size: 15px;"></td>
+						<td>0积分</td>
+						<td>1</td>
+						<td style="font-size: 16px;">0.00</td>
+					</tr>
+					<tr class="b_line">
+						<td>
+							<dl>
+								<dt>
+									<a href="detailed.php?id=1008" target="_blank">
+										<img src="http://img.holiland.com/images/201903/goods_img/1008_G_1552020565734.jpg" width="60" height="60"></a>
+								</dt>
+								<dd style="line-height:60px;">
+									<p>甜蜜进行时</p>
+									<!-- <label>BJ001008/sh</label> -->
+								</dd>
+							</dl>
+						</td>
+						<td style="font-size: 15px;">15cm-双莓慕斯+草莓</td>
+						<td>269积分</td>
+						<td>1</td>
+						<td style="font-size: 16px;">269.00</td>
+					</tr>
+					<tr class="b_line">
+						<td></td>
+						<td colspan="2" style="visibility:hidden;">
+							<textarea class="bak" name="238gx0z1406" placeholder="备注（200个字符以内）" maxlength="200"></textarea>
+						</td>
+						<td colspan="2">
+							<textarea class="bak" id="shengrip" name="text[1008]" placeholder="蛋糕牌（例如:生日快乐）汉字8个字以内、英文16个字符以内" onkeyup="checkWord('8', event, 'wordCheck')"
+							 maxlength="16" style="height:34px;" onblur="setSrp(this, '2373322');"></textarea>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+
+			</script>
+			<div class="h_fy" id="ordermoney">
+				<div id="ordermoneya">
+					<input name="bean.invoice" type="hidden">
+					<div class="h_fy_right">
+						<div id="showmoney">
+							商品金额合计:<span id="totalUserPrice">￥269.00</span>
+							配送费用:<span>￥0.00</span>
+							<label>需付:<b id="paid" class="jg" style="margin-left:0">￥269.00</b></label>
+							<p>
+							</p>
+						</div>
+						<input type="submit" value="提交" style="display:none" class="submit_done">
+						<textarea name="note" class="bak" type="text" placeholder="备注:(100字以内)" maxlength="100" onblur="setMessage(this)"></textarea>
+						<span onclick="javascript:submitForm_done();" class="tijiao">确认并提交订单</span>
+					</div>
+
+
+				</div>
+				<div class="h_fy_left">
+					<div>
+						<p class="hh youhui" id="hh1">
+							优惠券<i style="background-position:4px -84px;margin-left:-5px; margin-top:-4px; margin-right:0"></i>
+						</p>
+					</div>
+					<div class="fpneirong" id="showyouhui" style="display:none">
+						<div class="showyh">
+							<p>优惠券冲抵：使用优惠券抵消部分总额</p>
+							<p>添加优惠券（注：参加促销活动的商品不能使用优惠券）</p>
+							<p class="line" style="border-bottom:none;">或者输入线下红包序列号：
+								<input type="text" name="bouns_sn" value="" style="width: 160px;height: 28px;line-height: 28px;border: 1px solid #d6d5d5;vertical-align: middle;">
+								<a href="javascript:changeBonus_sn(0)">确定</a>
+							</p>
+						</div>
+					</div>
+					<!--<div class="youhuixx" id="youhuixx"></div>-->
+					<div class="fapiao">
+						<p class="hh" style="font-size: 15px;">
+							<span id="hh">发　票<i style="background-position:4px -84px;margin-left:-5px; margin-top:-4px; margin-right:0"></i></span>
+						</p>
+
+						<div class="fpneirong" id="fpneirong" style="display:none">
+							<div class="item itema" style="width:100%">
+								<input type="checkbox" name="need_inv" value="1" class="fapiaos" style="display:none">
+								<span>发票类型</span>
+								<span> <input type="radio" class="payee" name="inv_type" value="个人"> 个人</span>
+								<span> <input type="radio" class="payee" name="inv_type" value="单位"> 单位</span>
+							</div>
+							<div class="item itemd" style="width:100%">
+								发票内容
+								<select name="inv_content" id="ECS_INVCONTENT" onchange="changeNeedInv()" style="border:1px solid #ccc;">
+									<!-- <option value="">请选择</option> -->
+									<option value="蛋糕">蛋糕</option>
+								</select>
+							</div>
+							<div class="imm" id="dwmc" style="width:100%">
+								<span>
+									<font id="invTitleBox">发票抬头</font> <input id="invTitle" name="inv_payee" type="text" value="">
+								</span>
+							</div>
+							<div class="companyinvbox" style="display:none;">
+								<div class="imm" id="dwmc" style="width:100%">
+									<span>纳税人识别号 <input id="invNumber" name="inv_number" type="text" value=""> </span>
+								</div>
+								<div class="imm" id="dwmc" style="width:100%">
+									<span>手机号码 <input id="invMobile" name="inv_mobile" type="text" value=""> </span>
+								</div>
+								<div class="imm" id="dwmc" style="width:100%">
+									<span>电子邮箱 <input id="invEmail" name="inv_email" type="text" value=""> </span>
+								</div>
+							</div>
+							<div class="imm">
+								<a onclick="changeNeedInv_muyu(1)">确认</a>
+								<!-- <a class="fpquxiao" onclick="changeNeedInv_muyu(0)">取消发票信息</a> -->
+							</div>
+						</div>
+						<div class="news newsa">
+							<label>
+								<span id="showfpdw">
+								</span>
+							</label>
+						</div>
+					</div>
+
+				</div>
+
+				<input type="hidden" name="step" value="done">
+			</div>
+		</div>
+		
+		<script>
+			// 当点击提交订单的时候 ,  订单信息展示 
+		</script>
+	</body>
+</html>

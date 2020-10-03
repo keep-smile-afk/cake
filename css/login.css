@@ -1,0 +1,95 @@
+.login_bt {
+    margin: 10px auto 0;
+    overflow: hidden;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.hll_login {
+    width: 996px;
+    margin: 0 auto 20px;
+    padding: 45px 0 55px;
+    overflow: hidden;
+}
+.login_k, .regsetp_btn {
+    width: 312px;
+    margin: 0 auto;
+    background: #ededed;
+    height: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+.login_k dt {
+    float: left;
+    width: 50px;
+    border-right: 5px #FFF solid;
+    text-align: center;
+    padding: 0 5px 0 10px;
+    font-size: 14px;
+}
+.login_k dd {
+    position: relative;
+}
+.login_k input {
+    float: left;
+    display: inline-block;
+    background: none;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 1px solid #ededed;
+    color: #626262;
+	outline:none
+}
+.login_k dd div {
+    display: none;
+    padding-left: 20px;
+    top: 0px;
+    color: #F00;
+    left: 300px;
+    position: absolute;
+    width: 105%;
+    height: 32px;
+    line-height: 32px;
+}
+.login_k dd div.login_ts {
+    padding-left: 40px;
+    color: red;
+    color: red;
+}
+.login_k dd div.login_ts span {
+    padding: 0 20px 0 40px;
+    background: url(../img/bj_3.png) no-repeat;
+    display: inline-block;
+}
+.login_k dd a {
+    float: left;
+    padding-left: 8px;
+    height: 36px;
+    line-height: 40px;
+    display: inline-block;
+}
+.login_btnBox {
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.login_btnBox a.login_btn {
+    width: 190px;
+    margin-left: 0;
+    background: #87d0e3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login_btnBox a {
+    float: left;
+    height: 40px;
+    background: #ededed;
+    margin-left: 10px;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+}

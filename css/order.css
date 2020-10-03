@@ -1,32 +1,28 @@
-body {
-    width: 996px;
-    font-family: ΢���ź�;
-    font-size: 13px;
-    color: rgb(98, 98, 98);
-    text-size-adjust: none;
-    margin: 0px auto;
-    padding: 0px;
-}
 .login_bt {
     OVERFLOW: hidden;
     FONT-SIZE: 16px;
     HEIGHT: 30px;
-    WIDTH: 986px;
-    BACKGROUND: #ededed;
-    PADDING-LEFT: 10px;
     MARGIN: 10px auto;
     LINE-HEIGHT: 30px;
 }
-	
 .gouwuche {
     /* OVERFLOW: hidden; */
     WIDTH: 996px;
     MARGIN: 0px auto;
 }
 .gouwuche TABLE.xq {
-    /* OVERFLOW: hidden; */
     WIDTH: 990px;
     MARGIN: 0px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    border-color: grey;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 .gouwuche TABLE.xq TR {
     LINE-HEIGHT: 22px;
@@ -39,8 +35,8 @@ body {
     background: #ededed;
 }
 .gouwuche TABLE.xq TH SPAN {
+    WIDTH: 156px;
     BACKGROUND: #ededed;
-    PADDING-LEFT: 20px;
     MARGIN: 0px 5px 0px 0px;
     DISPLAY: inline-block;
     text-align: center;
@@ -80,20 +76,6 @@ body {
     PADDING-RIGHT: 0px;
     MARGIN-RIGHT: 3px;
 }
-.gouwuche TABLE.xq DL DT {
-    OVERFLOW: hidden;
-    HEIGHT: 65px;
-    WIDTH: 65px;
-    FLOAT: left;
-    PADDING-BOTTOM: 10px;
-}
-a {
-    color: rgb(98, 98, 98);
-    font-family: ΢���ź�;
-    text-decoration: none;
-    outline: none;
-}
-
 .gouwuche TABLE.xq TR TD A.jian {
     CURSOR: pointer;
     BORDER-TOP: #d5d5d5 1px solid;
@@ -110,24 +92,6 @@ a {
     DISPLAY: inline-block;
     LINE-HEIGHT: 20px;
     PADDING-RIGHT: 0px;
-}
-
-.gouwuche TABLE.xq TR TD INPUT {
-    BORDER-TOP: #d5d5d5 1px solid;
-    HEIGHT: 20px;
-    BORDER-RIGHT: #d5d5d5 1px solid;
-    WIDTH: 20px;
-    BACKGROUND: #fff;
-    BORDER-BOTTOM: #d5d5d5 1px solid;
-    PADDING-BOTTOM: 0px;
-    TEXT-ALIGN: center;
-    PADDING-TOP: 0px;
-    PADDING-LEFT: 0px;
-    BORDER-LEFT: #d5d5d5 1px solid;
-    DISPLAY: inline-block;
-    LINE-HEIGHT: 20px;
-    PADDING-RIGHT: 0px;
-    MARGIN-RIGHT: 3px;
 }
 .jixu {
     POSITION: relative;
@@ -153,6 +117,28 @@ a {
 .jixu P.head A {
     COLOR: #6bc4df;
     PADDING-RIGHT: 10px;
+}
+.jixu P.head LABEL I {
+    HEIGHT: 15px;
+    WIDTH: 22px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND: url(../img/index/bj_4.png) 0px -84px;
+    MARGIN: 0px 6px;
+    DISPLAY: inline-block;
+}
+.gouwuche TABLE.xq TR {
+    LINE-HEIGHT: 22px;
+}
+.gouwuche TABLE.xq TH {
+    HEIGHT: 27px;
+    FONT-WEIGHT: normal;
+    TEXT-ALIGN: left;
+    LINE-HEIGHT: 27px;
+    background: #ededed;
+}
+.jixu {
+    POSITION: relative;
+    TEXT-ALIGN: right;
 }
 .jixu P.xu {
     HEIGHT: 60px;
@@ -180,11 +166,12 @@ a {
     POSITION: absolute;
     TOP: 16px;
 }
-
+.jixu #submitid A {
+    BACKGROUND: #ff0;
+}
 .jixu #submitid A {
     FONT-SIZE: 14px;
     HEIGHT: 30px;
-    BACKGROUND: #ededed;
     PADDING-BOTTOM: 0px;
     PADDING-TOP: 0px;
     PADDING-LEFT: 13px;
@@ -193,6 +180,12 @@ a {
     LINE-HEIGHT: 30px;
     PADDING-RIGHT: 13px;
 }
-.jixu #submitid A {
-    BACKGROUND: #ff0;
+.sorad_list {
+    width: 996px;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    cursor: pointer;
+}
+.gouwuche_pro{
+	display: none;
 }

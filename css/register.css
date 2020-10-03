@@ -1,0 +1,254 @@
+
+/* 
+ 中间部分
+ */
+.login_bt {
+    margin: 10px auto 0;
+    overflow: hidden;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+/* 
+ 会员
+ */
+.hll_zc_jf {
+    width: 906px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 14px;
+    color: #87D0E3;
+}
+.hll_zc_jf i {
+    width: 23px;
+    height: 16px;
+    vertical-align: middle;
+    background: url(../img/index/heart.jpg) no-repeat scroll 0% 0% transparent;
+    display: inline-block;
+}
+/*
+ 注册
+ */
+.hll_login {
+    width: 996px;
+    margin: 0 auto 20px;
+    padding: 45px 0 55px;
+    overflow: hidden;
+}
+.hll_login form {
+   display: block;
+}
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark-color(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    font: 400 13.3333px Arial;
+}
+.login_k, .regsetp_btn {
+    width: 310px;
+    margin: 0 auto;
+    background: #ededed;
+    height: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+.regsetp_k dt {
+    border-right: 5px solid #fff;
+    height: 40px;
+    width: 70px;
+}
+.login_k dt {
+    float: left;
+    text-align: center;
+    padding: 0 5px 0 10px;
+    font-size: 14px;
+}
+.login_k dd {
+    position: relative;
+}
+.regsetp_k input {
+    width: 208px;
+}
+.login_k input {
+    float: left;
+    display: inline-block;
+    background: none;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 1px solid #ededed;
+    color: #626262;
+}
+.login_k dd div.login_ts {
+    padding-left: 40px;
+    color: red;
+    color: red;
+}
+.login_k dd div.login_ts span {
+    padding: 0 20px 0 40px;
+    background: url(../img/bj_3.png) no-repeat;
+    display: inline-block;
+}
+.login_k dd div {
+    display: none;
+    padding-left: 20px;
+    top: 0px;
+    color: #F00;
+    left: 300px;
+    position: absolute;
+    width: 105%;
+    height: 32px;
+    line-height: 32px;
+}
+.regsetp_btn {
+    width: 310px;
+    margin: 0 auto;
+    background: #ededed;
+    height: 40px;
+    margin-bottom: 0px;
+    line-height: 40px;
+}
+.regsetp_btn a {
+    display: block;
+    height: 40px;
+    background: #87d0e3;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login_k dd a {
+    float: left;
+    display: inline-block;
+}
+/* 尾部 */
+.h_footerhelp {
+    width: 996px;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: "Î¢ÈíÑÅºÚ";
+    clear: both;
+}
+.h_footerhelp p {
+    cursor: pointer;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    background: #ededed;
+    padding-left: 20px;
+    -webkit-transition: all 0.3s ease 0s;
+}
+.h_footerhelp p i {
+    vertical-align: middle;
+    display: inline-block;
+    width: 22px;
+    height: 14px;
+    margin: 0px 6px;
+    background: url(../img/index/bj_4.png) -0px -84px;
+}
+.h_footerhelp p.up i {
+    background-position: -23px -84px;
+}
+.h_footmenu {
+    width: 996px;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+    background: #ededed;
+    padding: 15px 18px;
+}
+.h_footmenu dl {
+    float: left;
+    width: 155px;
+    padding-left: 11px;
+}
+.h_footmenu dt {
+    font: lighter 20px/30px "Î¢ÈíÑÅºÚ";
+    margin-bottom: 8px;
+}
+.h_footmenu dt i {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.h_footmenu dd a {
+    color: #646464;
+}
+/*
+底部
+ */
+.h_footer {
+    height: 90px;
+    background: #fff;
+    border-top: 1px solid #d5d5d5;
+    margin: 10px auto;
+    font-size: 12px;
+}
+.h_footer span {
+    display: block;
+    float: left;
+    width: 420px;
+}
+.h_footer p {
+    margin: 10px 0;
+    color: #898989;
+    line-height: 20px;
+}
+.h_footer .h_footerright {
+    float: right;
+    margin-top: 10px;
+    width: 90px;
+    position: relative;
+}
+.h_footer .h_footerright h4 {
+    text-align: right;
+    font-family: "΢���ź�";
+    font-weight: normal;
+    font-size: 13px;
+}
+.h_footer .jiathis_button_tsina {
+    margin: 10px 0 0 10px;
+    float: left;
+}
+.h_footer .h_footerright .h_weixin {
+    margin: 5px 0 0 13px;
+    float: left;
+    width: 31px;
+    height: 35px;
+    background: url(../img/index/bj_2.png) no-repeat scroll 0px -56px;
+}
+.h_fenxiang {
+    width: 180px;
+    height: 220px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    position: absolute;
+    left: -100px;
+    top: -200px;
+    z-index: 2;
+    background: none repeat scroll 0% 0% #FFF;
+    display: none;
+}
+.h_fenxiang p {
+    height: 25px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 15px;
+    line-height: 25px;
+}
+.h_fenxiang img {
+    margin: 5px 15px;
+    height: 150px;
+    width: 150px;
+}

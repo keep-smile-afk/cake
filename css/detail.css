@@ -1,0 +1,227 @@
+.aler {
+    WIDTH: 996px;
+    MARGIN: 0px auto;
+    positive: relative;
+	background-color: #F0F8FF;
+}
+.h_cakexq {
+    WIDTH: 996px;
+    POSITION: relative;
+    MARGIN: 10px auto 0px;
+    /* Z-INDEX: 999; */
+}
+.h_cakexq .h_xqleft {
+    HEIGHT: 485px;
+    WIDTH: 485px;
+    POSITION: relative;
+    FLOAT: left;
+    Z-INDEX: 3333;
+}
+.changeBox_a1 {
+    BORDER-TOP: #ddd 1px solid;
+    HEIGHT: 485px;
+    BORDER-RIGHT: #ddd 1px solid;
+    WIDTH: 485px;
+    BORDER-BOTTOM: #ddd 1px solid;
+    POSITION: relative;
+    MARGIN: 0px auto;
+    BORDER-LEFT: #ddd 1px solid;
+    Z-INDEX: 30;
+}
+/* 
+ 右
+ */
+.h_cakexq .h_xqright {
+    OVERFLOW: hidden;
+    WIDTH: 485px;
+    FLOAT: right;
+}
+.h_cakexq .h_xqright SPAN.name {
+    OVERFLOW: hidden;
+
+    WIDTH: 300px;
+
+    COLOR: #2093cc;
+
+}
+.h_cakexq .h_xqright SPAN.name H2 {
+    WIDTH: 100%;
+}
+.h_cakexq .h_xqright H2 {
+    OVERFLOW: hidden;
+    FONT-SIZE: 20px;
+    HEIGHT: 30px;
+    FLOAT: left;
+    COLOR: #2093cc;
+}
+.h_cakexq .h_xqright SPAN.name P {
+    OVERFLOW: hidden;
+    WIDTH: 100%;
+    DISPLAY: block;
+}
+/* 
+ form
+ */
+.h_cakexq .h_xqright .h_box {
+    OVERFLOW: hidden;
+    WIDTH: 498px;
+}
+.h_xqright .h_box .h_ss_re {
+    POSITION: relative;
+}
+.h_xqright .h_box .h_ss {
+    HEIGHT: 50px;
+    WIDTH: 217px;
+    BACKGROUND: #87d0e3;
+    FLOAT: left;
+    COLOR: #fff;
+    TEXT-ALIGN: left;
+    PADDING-LEFT: 20px;
+    MARGIN: 12px 12px 0px 0px;
+    LINE-HEIGHT: 50px;
+}
+.h_xqright .h_box DL DT {
+    FLOAT: left;
+}
+.h_xqright .h_box DL DD {
+    FLOAT: left;
+}
+.h_xqright .h_box .h_ss SPAN {
+    CURSOR: pointer;
+    HEIGHT: 25px;
+    WIDTH: 158px;
+    BACKGROUND: #fff;
+    COLOR: #4fa9d7;
+    PADDING-BOTTOM: 0px;
+    TEXT-ALIGN: left;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 9px;
+    MARGIN: 13px 0px 0px 5px;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 25px;
+    PADDING-RIGHT: 3px;
+}
+.h_xqright .h_box .h_ss SPAN B {
+    FONT-WEIGHT: normal;
+}
+.h_xqright .h_box .h_ss I {
+    HEIGHT: 22px;
+    WIDTH: 12px;
+    BACKGROUND: url(../img/detail/bj_1.png) -38px 0px;
+    RIGHT: 20px;
+    POSITION: absolute;
+    DISPLAY: inline-block;
+    TOP: 15px;
+}
+.h_xqright .h_box .h_size {
+    OVERFLOW: auto;
+    CURSOR: pointer;
+    WIDTH: 170px;
+    HEIGHT: 30px;
+    BACKGROUND: #f6f6f6;
+    POSITION: absolute;
+    TEXT-ALIGN: left;
+    LEFT: 51px;
+    Z-INDEX: 3;
+    DISPLAY: none;
+    TOP: 38px;
+}
+.h_xqright .h_box .h_size2 {
+    HEIGHT: 75px;
+    /* WIDTH: 142px; */
+    OVERFLOW-Y: scroll;
+    /* MARGIN-LEFT: 26px; */
+}
+.h_xqright .h_box .h_size P {
+    OVERFLOW: hidden;
+    FONT-SIZE: 12px;
+    COLOR: #4fa9d7;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 9px;
+    DISPLAY: block;
+    LINE-HEIGHT: 24px;
+    PADDING-RIGHT: 3px;
+}
+.h_xqright .h_box .h_size P LABEL {
+    FLOAT: left;
+    MARGIN-RIGHT: 10px;
+}
+.h_xqright .h_box .h_size P FONT {
+    FLOAT: right;
+    PADDING-RIGHT: 10px;
+}
+.h_xqright .h_box .h_goumai {
+    CURSOR: pointer;
+}
+.h_xqright .h_box .h_goumai A {
+    WIDTH: 235px;
+    MARGIN-LEFT: -20px;
+    DISPLAY: inline-block;
+}
+.h_xqright .h_box .h_ss .h_shuxz {
+    MARGIN-LEFT: 40px;
+    DISPLAY: inline-block;
+}
+.h_xqright .h_box .h_ss .h_shuxz A {
+    CURSOR: pointer;
+    BORDER-TOP: #fff 1px solid;
+    HEIGHT: 25px;
+    BORDER-RIGHT: #fff 1px solid;
+    WIDTH: 25px;
+    VERTICAL-ALIGN: middle;
+    BORDER-BOTTOM: #fff 1px solid;
+    COLOR: #fff;
+    TEXT-ALIGN: center;
+    MARGIN: 0px;
+    BORDER-LEFT: #fff 1px solid;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 25px;
+}
+.h_xqright .h_box .h_ss .h_shuxz INPUT {
+    BORDER-TOP-STYLE: none;
+    HEIGHT: 27px;
+    WIDTH: 27px;
+    VERTICAL-ALIGN: middle;
+    BACKGROUND: #fff;
+    BORDER-BOTTOM-STYLE: none;
+    COLOR: #4fa9d7;
+    TEXT-ALIGN: center;
+    BORDER-RIGHT-STYLE: none;
+    BORDER-LEFT-STYLE: none;
+    DISPLAY: inline-block;
+    LINE-HEIGHT: 27px;
+}
+.h_xqright .h_box .h_goumai {
+    CURSOR: pointer;
+    BACKGROUND: #ffff00;
+}
+.h_xqright .h_box .h_goumai A {
+    WIDTH: 235px;
+    COLOR: #626262;
+    MARGIN-LEFT: -20px;
+    DISPLAY: inline-block;
+}
+.detail_xx {
+    OVERFLOW: hidden;
+    WIDTH: 936px;
+    BACKGROUND: #fffff;
+    PADDING-BOTTOM: 0px;
+    PADDING-TOP: 0px;
+    PADDING-LEFT: 30px;
+    CLEAR: both;
+    MARGIN: 0px auto 20px;
+    LINE-HEIGHT: 25px;
+    PADDING-RIGHT: 30px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.detail_xx img {
+    width: 996px;
+    margin-left: -30px;
+}

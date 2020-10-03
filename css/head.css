@@ -1,0 +1,289 @@
+body {
+	background: #fff;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: "΢���ź�";
+	font-size: 13px;
+	color: #626262;
+	-webkit-text-size-adjust: none;
+}
+
+a {
+	text-decoration: none;
+	color: #626262;
+	font-family: "΢���ź�";
+	outline: none;
+}
+
+ul,
+ol,
+dl,
+dd {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+	list-style: none
+}
+
+img {
+	border: 0px;
+}
+
+.h_head {
+	background: #FFF;
+	height: 115px;
+	font-family: "΢���ź�";
+}
+
+.h_head,
+.h_bigad,
+.h_xilie,
+.h_peisong,
+.h_footer {
+	box-sizing: border-box;
+	margin: 0px auto;
+	width: 996px;
+}
+
+.h_head h1 {
+	float: left;
+	margin-top: 33px;
+}
+
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+input,
+select {
+	margin: 0px;
+	padding: 0px;
+	font-family: "΢���ź�";
+}
+
+.h_head .head_right_new {
+	width: 845px;
+	margin-top: 25px;
+	//
+}
+
+.h_head .head_right {
+	float: right;
+	color: #6bc4df;
+}
+
+.h_head .head_right_new .h_login {
+	width: 100%;
+}
+
+.h_head .head_right .h_login {
+	float: right;
+	text-align: right;
+	height: 25px;
+	line-height: 25px;
+	margin: 0px 0px 10px 0px;
+	display: inline-block;
+}
+
+.h_head .head_right_new .h_login label {
+	padding-right: 0;
+	font-weight: normal;
+}
+
+.h_head .head_right .h_login label {
+	float: right;
+}
+
+.h_head .head_right .h_login a {
+	color: #6bc4df;
+}
+
+.h_head .head_right_new .h_login span.car {
+	margin-left: 0px;
+	height: 25px;
+	line-height: 25px;
+	margin-right: 20px;
+	width: auto;
+	margin-top: 0px;
+}
+
+.h_head .head_right .h_login span {
+	float: right;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.h_head .head_right_new .h_login span.car a {
+	padding-left: 25px;
+	background: url(../img/index/cart_icon.png) no-repeat left center;
+	vertical-align: middle;
+	width: auto;
+	height: 25px;
+	margin-top: 0;
+	background-size: 17px 14px;
+}
+
+.h_head .head_right .h_login span a {
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) .h_head .head_right .h_login span.car b {
+	line-height: 14px;
+}
+
+.h_head .head_right .h_login span.car b {
+	font-size: 10px;
+	height: 13px;
+	text-align: center;
+	font-weight: normal;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.h_login .dz_lo i {
+	vertical-align: middle;
+	display: inline-block;
+	width: 9px;
+	height: 14px;
+	background: url(../img/index/dizhi_icon.png) no-repeat left top;
+	float: left;
+	margin-top: 6px;
+	background-size: 9px 14px;
+}
+
+.h_head .head_right_new .baner {
+	float: left;
+	text-align: center;
+	height: auto;
+	line-height: 20px;
+	width: 703px;
+}
+
+.h_head .head_right .baner {
+	padding-right: 0px;
+}
+
+.h_head .head_right_new .baner li {
+	float: left;
+	width: 165px;
+	border-right: 1px solid #6bc4df;
+	position: relative;
+}
+
+.h_head .head_right_new .baner a {
+	float: none;
+	padding: 0;
+	text-decoration: none;
+}
+
+.h_head .head_right .baner a {
+	color: #6bc4df;
+}
+
+.h_head .head_right_new .baner span {
+	width: 100%;
+	display: inline-block;
+	font-size: 14px;
+	height: 25px;
+	line-height: 25px;
+}
+.h_head .head_right_new .baner .sub_nav {
+    position: absolute;
+    background: #fff;
+    width: 125px;
+    left: 20px;
+    padding: 0px 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 19860517;
+}
+.h_head .head_right_new .baner .sub_nav li {
+    padding: 10px 0px;
+    width: 80px;
+    margin: 0 auto;
+    border: none;
+    float: none;
+    background: #fff;
+}
+.h_head .head_right_new .baner li {
+    position: relative;
+}
+.h_phone {
+	float: left;
+	margin-top: 2px;
+	height: 17px;
+	line-height: 17px;
+	width: 120px;
+	margin-left: 5px;
+	background-color: aliceblue;
+}
+
+.h_phone img {
+	vertical-align: top;
+	color: #6bc4df;
+}
+
+.h_navserch {
+	margin-top: 5px;
+	float: left;
+	width: 105px;
+	height: 20px;
+	margin-left: 5px;
+}
+
+.h_navserch {
+	border: 1px solid #6bc4df;
+	background: #FFF;
+	position: relative;
+}
+
+.h_navserch input {
+	height: 20px;
+	line-height: 21px;
+	float: left;
+	width: 80px;
+	margin-left: 23px;
+}
+
+.h_navserch input {
+	border: medium none;
+	background: #fff;
+	margin: 0px;
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	outline:none
+}
+
+.h_navserch a {
+	background: url(../img/index/search_icon.png) no-repeat center;
+	left: 1px;
+	top: 1px;
+	background-size: 18px 18px;
+	width: 19px;
+	height: 18px;
+	position: absolute;
+	right: 2px;
+}
